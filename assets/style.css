@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background-color: #0b1626
+  color: #e9eef5; /* Clean UI Text */
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ========================= HEADER & NAV ========================= */
+.main-header {
+  background-color: #0f203a;
+  border-bottom: 2px solid #c9a441;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+.logo-img {
+  height: 42px;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+}
+
+.nav-link {
+  color: #e9eef5;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #c9a441;
+}
+
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #c9a441;
+}
+
+/* ========================= DROPDOWN ========================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 140%;
+  left: 0;
+  background-color: #142a4d; 
+  padding: 18px;
+  min-width: 280px;
+  border-left: 4px solid #c9a441;
+  z-index: 10;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content h4 {
+  color: #c9a441;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  margin: 12px 0 6px;
+}
+
+.dropdown-item {
+  display: block;
+  color: #e9eef5;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.dropdown-item:hover {
+  color: #c9a441;
+}
+
+/* ========================= BUTTON SYSTEM ========================= */
+.btn {
+  padding: 12px 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 2px; /* SHARP EDGE */
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #c9a441;
+  color: #0b1626;
+}
+
+.btn-primary:hover {
+  background-color: #b08e34;
+}
+
+.btn-secondary {
+  border: 2px solid #c9a441;
+  color: #c9a441;
+}
+
+.btn-secondary:hover {
+  background-color: #142a4d;
+}
+
+/* ========================= HERO ========================= */
+.hero-section {
+  background-color: #0b1626;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.hero-banner-img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border: 2px solid #c9a441;
+  margin-bottom: 36px;
+}
+
+.hero-title {
+  font-size: 34px;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.hero-subtitle {
+  color: #9fb2cc;
+  margin-bottom: 26px;
+}
+
+/* ========================= SECTION GENERAL ========================= */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #c9a441;
+  margin: 14px auto 0;
+}
+
+/* ========================= ABOUT ========================= */
+.about-section {
+  padding: 70px 0;
+}
+
+.about-text {
+  max-width: 820px;
+  margin: auto;
+  color: #9fb2cc;
+}
+
+.read-more-link {
+  color: #c9a441;
+  font-weight: 700;
+}
+
+.read-more-link:hover {
+  color: #b08e34;
+}
+
+/* ========================= PROGRAMS ========================= */
+.programs-section {
+  background-color: #0f203a;
+  padding: 70px 0;
+}
+
+.program-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+.program-item {
+  background-color: #142a4d;
+  padding: 26px;
+  border-left: 5px solid #c9a441;
+}
+
+.program-item p {
+  color: #9fb2cc;
+}
+
+/* ========================= TESTIMONIAL ========================= */
+.testimonials-section {
+  padding: 70px 0;
+}
+
+.testimonial-card {
+  background-color: #142a4d;
+  padding: 26px;
+  border: 1px solid #c9a441;
+}
+
+.testimonial-card p {
+  color: #9fb2cc;
+  margin-bottom: 12px;
+}
+
+/* ========================= NEWS ========================= */
+.news-events-section {
+  padding: 70px 0;
+}
+
+.more-news-link {
+  color: #c9a441;
+  font-weight: 700;
+}
+
+/* ========================= FOOTER ========================= */
+.main-footer {
+  background-color: #0b1626;
+  padding: 54px 0;
+  border-top: 2px solid #c9a441;
+}
+
+.footer-cta {
+  margin-bottom: 18px;
+}
+
+.contact-info {
+  margin-top: 34px;
+  color: #9fb2cc;
+}
+
+.tel-link,
+.email-link {
+  color: #e9eef5;
+}
+
+.copyright {
+  margin-top: 26px;
+  font-size: 14px;
+  color: #9fb2cc;
+}
+/* ========================= HOVER ========================= */
+.nav-link,
+.btn,
+.program-item,
+.dropdown-item {
+  transition: all 0.18s ease-out;
+}
+
+.program-item:hover {
+  transform: translateX(6px);
+  background-color: #1a3563;
+}
+
+.dropdown-item:hover {
+  padding-left: 6px;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 0 2px rgba(201, 164, 65, 0.4);
+}
