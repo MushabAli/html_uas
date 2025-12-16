@@ -247,29 +247,96 @@ a {
 
 /* ========================= FOOTER ========================= */
 .main-footer {
-  background-color: #0b1626;
-  padding: 54px 0;
+  background-color: #1c2b4a;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
   border-top: 2px solid #c9a441;
 }
 
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-top {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .footer-cta {
-  margin-bottom: 18px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
-.contact-info {
-  margin-top: 34px;
-  color: #9fb2cc;
+.footer-cta-btn {
+  background-color: #f39c12;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.tel-link,
-.email-link {
-  color: #e9eef5;
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 30px;
 }
 
-.copyright {
-  margin-top: 26px;
-  font-size: 14px;
-  color: #9fb2cc;
+.footer-column {
+  flex: 1 1 260px;
+  min-width: 220px;
+}
+
+.footer-column h5 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 1.1em;
+}
+
+.footer-list,
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li,
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #f39c12;
+}
+
+.footer-quote {
+  font-style: italic;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.social-media a {
+  margin: 0 10px;
+  font-size: 1.5em;
+  color: #f1f1f1;
+  transition: color 0.2s ease;
+}
+
+.social-media a:hover {
+  color: #f39c12;
 }
 /* ========================= HOVER ========================= */
 .nav-link,
