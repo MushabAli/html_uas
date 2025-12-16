@@ -39,72 +39,234 @@ a {
   width: 100px;
 }
 
-.main-nav ul {
-  display: flex;
-  align-items: center;
-  gap: 26px;
+.image-carousel {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  transition: transform 0.8s ease-in-out; 
+}
+
+.carousel-slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.hero-banner-img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel-indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-indicator.current-slide {
+  background: #333;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link {
-  color: #142a4d;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  position: relative;
-  transition: all 0.18s ease-out;
+    color: #142a4d;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: all 0.18s ease-out;
+    text-decoration: none;
+    padding: 10px 0;
 }
 
 .nav-link:hover {
-  color: #c9a441;
+    color: #c9a441;
 }
 
 .nav-link:hover::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #c9a441;
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #c9a441;
 }
 
 .dropdown {
-  position: relative;
+    position: relative;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 140%;
-  left: 0;
-  background-color: #142a4d;
-  padding: 18px;
-  min-width: 280px;
-  border-left: 4px solid #c9a441;
-  z-index: 10;
+    display: none;
+    position: absolute;
+    top: 140%;
+    left: 0;
+    background-color: #142a4d;
+    padding: 18px;
+    min-width: 280px;
+    border-left: 4px solid #c9a441;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 .dropdown-content h4 {
-  color: #c9a441;
-  font-size: 13px;
-  margin: 12px 0 6px;
+    color: #c9a441;
+    font-size: 13px;
+    margin: 12px 0 6px;
 }
 
 .dropdown-item {
-  display: block;
-  color: #e9eef5;
-  font-size: 14px;
-  margin-bottom: 6px;
-  transition: all 0.18s ease-out;
+    display: block;
+    color: #e9eef5;
+    font-size: 14px;
+    margin-bottom: 6px;
+    transition: all 0.18s ease-out;
+    text-decoration: none;
+    padding: 3px 0;
 }
 
 .dropdown-item:hover {
-  color: #c9a441;
-  padding-left: 6px;
+    color: #c9a441;
+    padding-left: 6px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #142a4d;
+    order: 2;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        z-index: 9;
+    }
+    
+    .main-nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-link {
+        color: #142a4d;
+        padding: 12px 20px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .nav-link:hover::after {
+        content: none;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: #e9eef5;
+        border-left: none;
+        width: 100%;
+        padding: 10px 0;
+        min-width: unset;
+    }
+
+    .dropdown-content h4 {
+        color: #142a4d;
+        padding-left: 25px;
+        font-size: 12px;
+        margin-top: 8px;
+        margin-bottom: 4px;
+    }
+
+    .dropdown-item {
+        color: #142a4d;
+        padding: 4px 45px;
+        margin-bottom: 2px;
+    }
+
+    .dropdown-item:hover {
+        color: #c9a441;
+        padding-left: 51px;
+        background-color: rgba(201, 164, 65, 0.1);
+    }
+    
+    .main-nav ul.active {
+        display: flex;
+    }
 }
 
 .btn {
@@ -248,12 +410,13 @@ a {
 }
 
 .testimonial-card:hover {
-  background-color: #1a3563;
+  color:white;
+  background-color: #c9a441;
   transform: translateY(-4px);
 }
 
 .testimonial-card p {
-  color: #9fb2cc;
+  color: white;
   margin-bottom: 12px;
 }
 
@@ -267,8 +430,16 @@ a {
 }
 
 .partner {
-  display: flex;
-  margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; 
+}
+
+.Partner-Kalbis {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
 }
 
 .news-events-section {
